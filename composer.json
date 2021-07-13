@@ -1,0 +1,25 @@
+{
+    "name": "romulo/mecispa",
+    "description": "plataforma MECIS PA para o gerenciamento dos eventos e projetos desenvolvido e realizados pelo movimento",
+    "authors": [
+        {
+            "name": "Romulo Farias",
+            "email": "romulo.farias@sout.net.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\":"App/"
+        },
+        "files": [
+            "config.php",
+            "App/Services/Home.php",
+            "App/Services/Sobrenos.php"           
+        ],
+        "classmap": [
+            "App/Services/Home.php",
+            "App/Services/Sobrenos.php"           
+        ]
+    },
+    "require": {}
+}
