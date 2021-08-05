@@ -9,4 +9,5 @@ return array(
     '31f43c70a06adfc25f5dd412f45fedaf' => $baseDir . '/config.php',
     'bc2ebf2de4ba22dff4fa18911d1b6d68' => $baseDir . '/App/Services/Home.php',
     '36e0107e626e5baa67d9c7e721077361' => $baseDir . '/App/Services/Sobrenos.php',
+    '23e994df834eb28da65c4e2977691a49' => $baseDir . '/App/Services/Eventos.php',
 );

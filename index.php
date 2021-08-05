@@ -2,7 +2,7 @@
 require_once "vendor/autoload.php";
 use App\Home\Home;
 use App\Sobrenos\Sobrenos;
-
+use App\Eventos\Eventos;
     if($_GET['url']){
         $url = explode("/",$_GET['url']);
         $class = ucfirst(strtolower($url[0]));
@@ -11,7 +11,7 @@ use App\Sobrenos\Sobrenos;
         $method = isset($url[0]) ? $url[0] : null;
         if(class_exists($classe)){
             $pagina = new $classe($url[0]);
-            if(!empty($method) AND (method_exists($classe, $method)) ){
+                if(!empty($method) AND (method_exists($classe, $method)) ){
                 $pagina->$method($url[0]);
             }
             $pagina->show();

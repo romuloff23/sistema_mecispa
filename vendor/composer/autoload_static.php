@@ -10,6 +10,7 @@ class ComposerStaticInitf35fc29758e4e0fa25c3d970895fd6a7
         '31f43c70a06adfc25f5dd412f45fedaf' => __DIR__ . '/../..' . '/config.php',
         'bc2ebf2de4ba22dff4fa18911d1b6d68' => __DIR__ . '/../..' . '/App/Services/Home.php',
         '36e0107e626e5baa67d9c7e721077361' => __DIR__ . '/../..' . '/App/Services/Sobrenos.php',
+        '23e994df834eb28da65c4e2977691a49' => __DIR__ . '/../..' . '/App/Services/Eventos.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -27,6 +28,7 @@ class ComposerStaticInitf35fc29758e4e0fa25c3d970895fd6a7
     );
 
     public static $classMap = array (
+        'App\\Eventos\\Eventos' => __DIR__ . '/../..' . '/App/Services/Eventos.php',
         'App\\Home\\Home' => __DIR__ . '/../..' . '/App/Services/Home.php',
         'App\\Sobrenos\\Sobrenos' => __DIR__ . '/../..' . '/App/Services/Sobrenos.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',

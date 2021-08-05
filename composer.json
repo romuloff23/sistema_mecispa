@@ -14,11 +14,13 @@
         "files": [
             "config.php",
             "App/Services/Home.php",
-            "App/Services/Sobrenos.php"           
+            "App/Services/Sobrenos.php",
+            "App/Services/Eventos.php"           
         ],
         "classmap": [
             "App/Services/Home.php",
-            "App/Services/Sobrenos.php"           
+            "App/Services/Sobrenos.php",
+            "App/Services/Eventos.php"         
         ]
     },
     "require": {}

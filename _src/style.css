@@ -1,0 +1,15 @@
+/*margem top 10px para não ficar colado o conteudo ao menu.*/
+
+.centralizar{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.mg-top{
+    margin-top: 10px;
+}
+
+.mg-card{
+    margin: 5px !important ;
+}

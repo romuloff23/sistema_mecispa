@@ -1,16 +1,16 @@
-<?php namespace App\Sobrenos; 
+<?php namespace App\Eventos; 
 
-    class Sobrenos{
-
+    class Eventos{
         private $logo;
         private $titulo;
         private $html;
 
         public function __construct(){
-            $this->html = file_get_contents('App/View/sobrenos.html');
+            $this->html = file_get_contents('App/View/eventos.html');
             $this->logo = "_src/logo.png";
-            $this->titulo = "Sobre nós - MECIS";
+            $this->titulo = "Eventos - MECIS";
         }
+
         public function load(){
             $head = '';
             $cabecalho = '';
@@ -27,11 +27,28 @@
             $this->html = str_replace('{head}',$head,$this->html);
             $this->html = str_replace('{cabecalho}',$cabecalho,$this->html);
             $this->html = str_replace('{menu}',$menu,$this->html);
-            
+            $this->html = str_replace('{Titulo}',$this->titulo,$this->html);
+            $this->cards();
         }
+
+
+        private function cards(){
+            //pegar dados do banco
+            $v = false;
+            if($v==true){//se existe dados carrega
+
+            }else{//se não tiver evento carregado 
+                $this->html = str_replace('{card_eveto}','Sem Eventos no momento, por favor volte mais tarde :)',$this->html);
+            }
+        }
+
         public function show(){
             $this->load();
             print $this->html;
         }
+
     }
+
+   
+
 ?>
