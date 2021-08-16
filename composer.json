@@ -15,12 +15,16 @@
             "config.php",
             "App/Services/Home.php",
             "App/Services/Sobrenos.php",
-            "App/Services/Eventos.php"           
+            "App/Services/Eventos.php",           
+            "App/Models/Class/ClassEventos.php",
+            "App/Models/ModelsEventos.php"
         ],
         "classmap": [
             "App/Services/Home.php",
             "App/Services/Sobrenos.php",
-            "App/Services/Eventos.php"         
+            "App/Services/Eventos.php",
+            "App/Models/Class/ClassEventos.php",
+            "App/Models/ModelsEventos.php"          
         ]
     },
     "require": {}

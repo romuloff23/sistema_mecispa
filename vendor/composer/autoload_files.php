@@ -10,4 +10,6 @@ return array(
     'bc2ebf2de4ba22dff4fa18911d1b6d68' => $baseDir . '/App/Services/Home.php',
     '36e0107e626e5baa67d9c7e721077361' => $baseDir . '/App/Services/Sobrenos.php',
     '23e994df834eb28da65c4e2977691a49' => $baseDir . '/App/Services/Eventos.php',
+    'a48d0533d67f1c246ec0642c108dbb81' => $baseDir . '/App/Models/Class/ClassEventos.php',
+    '813ae6a85cb60331323afce6d9a9f6b5' => $baseDir . '/App/Models/ModelsEventos.php',
 );

@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '84864c0dcc9fec8a7ed3dea847ff8df694495988',
+    'reference' => 'd47eb9d71b75fe2008d0f31ac54a058e09954023',
     'name' => 'romulo/mecispa',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '84864c0dcc9fec8a7ed3dea847ff8df694495988',
+      'reference' => 'd47eb9d71b75fe2008d0f31ac54a058e09954023',
     ),
   ),
 );

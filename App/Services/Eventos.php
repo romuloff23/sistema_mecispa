@@ -1,14 +1,18 @@
-<?php namespace App\Eventos; 
+<?php namespace App\Eventos;
 
-    class Eventos{
+use App\ClassEventos\ClassEventos;
+use App\ModelsEventos\ModelsEventos;
+
+class Eventos{
         private $logo;
         private $titulo;
         private $html;
-
+        private $cEvento;
         public function __construct(){
             $this->html = file_get_contents('App/View/eventos.html');
             $this->logo = "_src/logo.png";
             $this->titulo = "Eventos - MECIS";
+            $this->cEvento = new ClassEventos();
         }
 
         public function load(){
@@ -44,8 +48,32 @@
 
         public function show(){
             $this->load();
+            $this->listarDados();
             print $this->html;
         }
+
+        
+        private function listarDados(){
+            $a = new ModelsEventos();
+            foreach( $a->selectAll() as $row ){
+                $this->cEvento->setId($row['id']);
+                echo$this->cEvento->getId();
+                $this->cEvento->setNome($row['nome']);
+                $this->cEvento->setDataEvento($row['dataEvento']);
+                $this->cEvento->setDataInicialInscricao($row['dataInscricao']);
+                $this->cEvento->setDataFinalIncricao($row['dataFinInscricao']);
+                $this->cEvento->setDescricao($row['descricao']);
+                $this->cEvento->setDescricaoResumida($row['descricaoResumida']);
+                $this->cEvento->setUrlEvento($row['urlEvento']);
+                $this->cEvento->setFotoEvento($row['imgEvento']);
+                $this->cEvento->setLocalEvento($row['localEvento']);
+                $this->cEvento->setOrganizacao($row['organizacao']);
+                $this->cEvento->setPatrocinadores($row['patrocinadores']);
+            }
+                       
+        }
+
+        
 
     }
 
