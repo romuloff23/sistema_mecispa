@@ -45,6 +45,22 @@
         /**
          * Get the value of patrocinadores
          */ 
+
+        public function loadingClass($dados){
+            $this->id = $dados['id'];
+            $this->nome = $dados['nome'];
+            $this->dataEvento = ($dados['dataEvento']);
+            $this->dataInicialInscricao = $dados['dataInscricao'];
+            $this->dataFinalIncricao = $dados['dataFinInscricao'];
+            $this->descricao =$dados['descricao'];
+            $this->descricaoResumida = $dados['descricaoResumida'];            $this->setUrlEvento($dados['urlEvento']);
+            $this->fotoEvento = $dados['imgEvento'];
+            $this->urlEvento = $dados['urlEvento'];
+            $this->localEvento = $dados['localEvento'];
+            $this->organizacao = $dados['organizacao'];
+            $this->patrocinadores = $dados['patrocinadores'];
+        }
+
         public function getPatrocinadores(){
             return $this->patrocinadores;
         }

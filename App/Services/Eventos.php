@@ -37,39 +37,34 @@ class Eventos{
 
 
         private function cards(){
-            //pegar dados do banco
-            $v = false;
-            if($v==true){//se existe dados carrega
-
-            }else{//se não tiver evento carregado 
+            $a = new ModelsEventos();
+            $itensCard ="";
+            try{//se existe dados carrega
+                foreach( $a->selectAll() as $row ){
+                    $this->cEvento->loadingClass($row);
+                    $card = file_get_contents('App/View/partes/card_evento.html');
+                    $card = str_replace('{url_foto}',$this->cEvento->getFotoEvento(), $card);
+                    $card = str_replace('{TituloCard}',$this->cEvento->getNome(), $card);
+                    $card = str_replace('{TextoCard}',$this->cEvento->getDescricaoResumida(), $card);
+                    $card = str_replace('{LinkEvento}',$this->cEvento->getUrlEvento(), $card);
+                    $itensCard .= $card;
+                }
+                $this->html = str_replace('{card_eveto}',$itensCard,$this->html);
+            }catch (\Exception $e){//se não tiver evento carregado 
                 $this->html = str_replace('{card_eveto}','Sem Eventos no momento, por favor volte mais tarde :)',$this->html);
             }
         }
 
         public function show(){
             $this->load();
-            $this->listarDados();
+           
             print $this->html;
         }
 
         
-        private function listarDados(){
-            $a = new ModelsEventos();
-            foreach( $a->selectAll() as $row ){
-                $this->cEvento->setId($row['id']);
-                echo$this->cEvento->getId();
-                $this->cEvento->setNome($row['nome']);
-                $this->cEvento->setDataEvento($row['dataEvento']);
-                $this->cEvento->setDataInicialInscricao($row['dataInscricao']);
-                $this->cEvento->setDataFinalIncricao($row['dataFinInscricao']);
-                $this->cEvento->setDescricao($row['descricao']);
-                $this->cEvento->setDescricaoResumida($row['descricaoResumida']);
-                $this->cEvento->setUrlEvento($row['urlEvento']);
-                $this->cEvento->setFotoEvento($row['imgEvento']);
-                $this->cEvento->setLocalEvento($row['localEvento']);
-                $this->cEvento->setOrganizacao($row['organizacao']);
-                $this->cEvento->setPatrocinadores($row['patrocinadores']);
-            }
+        private function carregarCard(){
+           
+            
                        
         }
 
