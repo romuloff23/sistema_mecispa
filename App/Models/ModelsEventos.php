@@ -7,11 +7,11 @@
         
 
         /**
-        *   Class de Eventos, para exibir e criar novos eventos 
+        *   Class Model Eventos, para exibir e criar novos eventos 
         *   esta classe contem toda a configuração nescessaria 
         *   para a realização do evento, desde os patrocinadores
         *   até o local do evento.
-        *
+        *   Classe de CRUD 
         *
         *   @author Rômulo F. Farias <romuloff23@gmail.com>
         *   @access private

@@ -2,7 +2,7 @@
 
     class ClassEventos{
         /**
-        *   Class de Eventos, para exibir e criar novos eventos 
+        *   Class de Eventos. 
         *   esta classe contem toda a configuração nescessaria 
         *   para a realização do evento, desde os patrocinadores
         *   até o local do evento.
@@ -42,9 +42,10 @@
 
 
         
-        /**
-         * Get the value of patrocinadores
-         */ 
+         /**
+          * Metodo para carregar dados na classe
+          * @param array de dados;
+         */
 
         public function loadingClass($dados){
             $this->id = $dados['id'];
@@ -53,13 +54,17 @@
             $this->dataInicialInscricao = $dados['dataInscricao'];
             $this->dataFinalIncricao = $dados['dataFinInscricao'];
             $this->descricao =$dados['descricao'];
-            $this->descricaoResumida = $dados['descricaoResumida'];            $this->setUrlEvento($dados['urlEvento']);
+            $this->descricaoResumida = $dados['descricaoResumida'];
             $this->fotoEvento = $dados['imgEvento'];
             $this->urlEvento = $dados['urlEvento'];
             $this->localEvento = $dados['localEvento'];
             $this->organizacao = $dados['organizacao'];
             $this->patrocinadores = $dados['patrocinadores'];
         }
+
+        /**
+         * Get the value of patrocinadores
+         */
 
         public function getPatrocinadores(){
             return $this->patrocinadores;
@@ -68,11 +73,9 @@
         /**
          * Set the value of patrocinadores
          *
-         * @return  self
          */ 
         public function setPatrocinadores($patrocinadores){
             $this->patrocinadores = $patrocinadores;
-            return $this;
         }
 
         /**
@@ -85,11 +88,9 @@
         /**
          * Set the value of organizacao
          *
-         * @return  self
          */ 
         public function setOrganizacao($organizacao){
             $this->organizacao = $organizacao;
-            return $this;
         }
 
         /**
@@ -102,11 +103,9 @@
         /**
          * Set the value of localEvento
          *
-         * @return  self
          */ 
         public function setLocalEvento($localEvento){
             $this->localEvento = $localEvento;
-            return $this;
         }
 
         /**
@@ -119,11 +118,9 @@
         /**
          * Set the value of fotoEvento
          *
-         * @return  self
          */ 
         public function setFotoEvento($fotoEvento){
             $this->fotoEvento = $fotoEvento;
-            return $this;
         }
 
         /**
@@ -136,11 +133,9 @@
         /**
          * Set the value of urlEvento
          *
-         * @return  self
          */ 
         public function setUrlEvento($urlEvento){
             $this->urlEvento = $urlEvento;
-            return $this;
         }
 
         /**
@@ -152,12 +147,9 @@
 
         /**
          * Set the value of descricaoResumida
-         *
-         * @return  self
          */ 
         public function setDescricaoResumida($descricaoResumida){
             $this->descricaoResumida = $descricaoResumida;
-            return $this;
         }
 
         /**
@@ -170,11 +162,9 @@
         /**
          * Set the value of descricao
          *
-         * @return  self
          */ 
         public function setDescricao($descricao){
             $this->descricao = $descricao;
-            return $this;
         }
 
         /**
@@ -187,11 +177,9 @@
         /**
          * Set the value of dataFinalIncricao
          *
-         * @return  self
          */ 
         public function setDataFinalIncricao($dataFinalIncricao){
             $this->dataFinalIncricao = $dataFinalIncricao;
-            return $this;
         }
 
         /**
@@ -204,11 +192,9 @@
         /**
          * Set the value of dataInicialInscricao
          *
-         * @return  self
          */ 
         public function setDataInicialInscricao($dataInicialInscricao){
             $this->dataInicialInscricao = $dataInicialInscricao;
-            return $this;
         }
 
         /**
@@ -221,11 +207,9 @@
         /**
          * Set the value of dataEvento
          *
-         * @return  self
          */ 
         public function setDataEvento($dataEvento){
             $this->dataEvento = $dataEvento;
-            return $this;
         }
 
         /**
@@ -238,30 +222,24 @@
         /**
          * Set the value of nome
          *
-         * @return  self
          */ 
         public function setNome($nome){
             $this->nome = $nome;
-            return $this;
         }
 
         /**
          * Get the value of id
          */ 
-        public function getId()
-        {
-                return $this->id;
+        public function getId(){
+            return $this->id;
         }
 
         /**
          * Set the value of id
          *
-         * @return  self
          */ 
-        public function setId($id)
-        {
-                $this->id = $id;
-
-                return $this;
+        public function setId($id){
+            $this->id = $id;
         }
     }
+?>

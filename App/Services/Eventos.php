@@ -3,11 +3,12 @@
 use App\ClassEventos\ClassEventos;
 use App\ModelsEventos\ModelsEventos;
 
-class Eventos{
+    class Eventos{
         private $logo;
         private $titulo;
         private $html;
         private $cEvento;
+
         public function __construct(){
             $this->html = file_get_contents('App/View/eventos.html');
             $this->logo = "_src/logo.png";
@@ -59,16 +60,8 @@ class Eventos{
             $this->load();
            
             print $this->html;
-        }
-
-        
-        private function carregarCard(){
-           
-            
-                       
-        }
-
-        
+        }    
+              
 
     }
 

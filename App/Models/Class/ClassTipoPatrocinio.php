@@ -3,6 +3,7 @@
 
 
     class  ClassTipoPatrocinio{
+            
         /**
         *   Class de Tipo de Patrocinio responsalve por
         *   definir qual é a forma de patrocinio, se é
